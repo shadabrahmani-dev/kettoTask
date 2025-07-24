@@ -1,0 +1,85 @@
+<div class="p-2 p-md-0 ms-md-5">
+  <div class="card shadow rounded-3 p-3">
+    <!-- Amount and Progress -->
+    <div>
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="fw-bold text-dark m-0">$123,456</h5>
+        <small class="text-secondary">raised of $847,987</small>
+      </div>
+      <div class="progress mt-2" style="height: 8px; border-radius: 10px;">
+        <div
+          class="progress-bar bg-warning"
+          [style.width.%]="progressPercentage"
+          aria-label="donate progress bar"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Donors and Days -->
+    <div class="d-flex gap-4 mt-3">
+      <small class="text-muted">1000 donors</small>
+      <small class="fw-bold text-danger">5 days to go</small>
+    </div>
+
+    <hr />
+
+    <!-- Organizer -->
+    <div class="d-flex gap-3 align-items-start">
+      <img src="https://via.placeholder.com/40" class="rounded-circle" alt="Organizer" />
+      <div class="flex-grow-1">
+        <h6 class="fw-bold mb-1">Organizer</h6>
+        <p class="text-muted small mb-1">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="d-flex align-items-center gap-1">
+        <button class="btn btn-sm btn-outline-info rounded-pill">
+          <i class="bi bi-envelope"></i> Contact
+        </button>
+        <button class="btn btn-sm btn-info rounded-circle text-white">
+          <i class="bi bi-info-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="d-flex align-items-center gap-2 mt-2">
+      <i class="bi bi-geo-alt-fill"></i>
+      <small class="text-secondary">San Francisco, California</small>
+    </div>
+
+    <!-- Donate Button -->
+    <button class="btn w-100 mt-3 fw-bold text-dark" style="background-color: #ffbe62;">
+      Donate now
+    </button>
+
+    <!-- Encryption Info -->
+    <div class="d-flex align-items-center gap-2 mt-2">
+      <i class="bi bi-lock-fill text-dark"></i>
+      <small class="text-muted">We protect your payment info using 256-bit encryption</small>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="mt-2 d-flex align-items-center gap-2">
+      <small class="text-muted">Share:</small>
+      <i class="bi bi-instagram text-danger"></i>
+      <i class="bi bi-youtube text-danger"></i>
+      <i class="bi bi-linkedin text-primary"></i>
+      <i class="bi bi-envelope text-secondary"></i>
+      <i class="bi bi-link"></i>
+    </div>
+
+    <!-- Bottom Guarantee -->
+    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-2">
+      <small class="fw-bold text-primary">⛨ Protected by Equal All Guarantee</small>
+      <button class="btn btn-sm" (click)="toggleMore()">
+        <i class="bi" [ngClass]="showMore ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+      </button>
+    </div>
+
+    <!-- Read More Content -->
+    <div *ngIf="showMore" class="mt-2 text-secondary small">
+      This campaign is covered by Equal All's donation protection program. Your donations are safe and encrypted.
+    </div>
+  </div>
+</div>

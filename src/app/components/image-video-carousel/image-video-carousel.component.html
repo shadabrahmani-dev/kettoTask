@@ -1,0 +1,18 @@
+<div id="mediaCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div *ngFor="let item of mediaItems; let i = index" class="carousel-item" [ngClass]="{ active: i === 0 }">
+      <ng-container *ngIf="item.type === 'image'; else videoTemplate">
+        <img [src]="item.src" class="d-block w-100 rounded" style="height: 300px; object-fit: cover;" alt="...">
+      </ng-container>
+      <ng-template #videoTemplate>
+        <video [src]="item.src" class="d-block w-100 rounded" style="height: 300px; object-fit: cover;" autoplay muted controls></video>
+      </ng-template>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mediaCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mediaCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>

@@ -1,0 +1,63 @@
+<div class="container py-3">
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let tab of tabData">
+      <a
+        class="nav-link"
+        [class.active]="selectedTabId === tab.id"
+        (click)="selectTab(tab.id)"
+        href="javascript:void(0)"
+      >
+        {{ tab.title }}
+      </a>
+    </li>
+  </ul>
+
+  <!-- Tabs Content -->
+  <div class="tab-content mt-3">
+    <!-- Campaign Tab -->
+    <div *ngIf="selectedTabId === 1" class="tab-pane fade show active">
+      <h5>Story</h5>
+      <p>
+        Dear friends, family, and compassionate strangers,
+        <br />
+        We are reaching out to you with heavy hearts and a plea for help...
+      </p>
+
+      <h6>Who is Poppie?</h6>
+      <p>
+        Poppie is a bright and resilient young girl, known for her infectious smile
+        and boundless energy. She brings light to everyone around her and has always faced life with courage.
+      </p>
+
+      <!-- Conditionally Show More -->
+      <div *ngIf="readMore">
+        <p>
+          Recently, Poppie was diagnosed with a rare and aggressive illness.
+          The treatment required is urgent and expensive.
+        </p>
+        <p>
+          Her family has exhausted their savings and now needs your help.
+          Every contribution, no matter how small, makes a difference.
+        </p>
+      </div>
+
+      <!-- Toggle Button -->
+      <button class="btn btn-link p-0" (click)="toggleReadMore()">
+        {{ readMore ? 'Read less' : 'Read more' }}
+      </button>
+    </div>
+
+    <!-- Documents Tab Content -->
+    <div *ngIf="selectedTabId === 2">
+      <h5>Supported Document(s)</h5>
+      <img
+        src="assets/doc-placeholder.jpg"
+        alt="Document"
+        class="img-fluid rounded shadow-sm mb-3"
+        style="max-width: 300px;"
+      />
+      <p class="text-muted">Here is the proof document submitted for the cause.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div class="container mt-2" (window:resize)="onResize($event)">
+  <!-- Desktop heading -->
+  <h2 class="fw-bold text-dark mb-3 d-none d-sm-block">
+    My niece Poppy has lost her parents and need your help!
+  </h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-image-video-carousel [mediaItems]="mediaItems"></app-image-video-carousel>
+
+      <div *ngIf="!isMobile" class="mt-3">
+        <!-- Custom Tabs here -->
+        <app-custom-tab></app-custom-tab>
+      </div>
+    </div>
+
+    <!-- Mobile heading -->
+    <div *ngIf="isMobile" class="col-10 mx-3 my-3 text-wrap">
+      <h5 class="fw-semibold text-dark">My niece Poppy has lost parents and need your help!</h5>
+    </div>
+
+    <div class="col-md-6">
+      <app-donation-info></app-donation-info>
+    </div>
+
+    <div *ngIf="isMobile" class="col-12">
+      <app-custom-tab></app-custom-tab>
+    </div>
+
+    <div class="col-12 mt-3">
+      <!-- <app-testimonial-card></app-testimonial-card> -->
+    </div>
+
+    <div class="col-12 mt-3 mb-5">
+      <app-faq></app-faq>
+    </div>
+  </div>
+
+  <div *ngIf="isMobile" class="position-fixed bottom-0 start-0 end-0 w-100 bg-white shadow" style="z-index: 100;">
+    <img src="assets/btnImage.png" alt="Donate Now button" class="img-fluid" style="max-height: 65px; object-fit: contain;">
+  </div>
+</div>

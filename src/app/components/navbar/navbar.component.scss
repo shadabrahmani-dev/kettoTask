@@ -1,0 +1,10 @@
+/* Optional: responsive tweaks */
+@media (max-width: 576px) {
+  .navbar-brand h5 {
+    font-size: 1rem;
+  }
+
+  .text-muted {
+    font-size: 0.8rem;
+  }
+}
