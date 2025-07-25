@@ -1,7 +1,13 @@
 .card {
   max-width: 100%;
 }
-img {
-  width: 40px;
-  height: 40px;
+.donate-btn {
+  background-color: #ffbf5c;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
 }

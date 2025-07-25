@@ -1,5 +1,4 @@
 <div class="container py-3">
-  <!-- Tabs Navigation -->
   <ul class="nav nav-tabs">
     <li class="nav-item" *ngFor="let tab of tabData">
       <a
@@ -13,24 +12,21 @@
     </li>
   </ul>
 
-  <!-- Tabs Content -->
   <div class="tab-content mt-3">
-    <!-- Campaign Tab -->
     <div *ngIf="selectedTabId === 1" class="tab-pane fade show active">
-      <h5>Story</h5>
+      <h2>Story</h2>
       <p>
         Dear friends, family, and compassionate strangers,
         <br />
         We are reaching out to you with heavy hearts and a plea for help...
       </p>
 
-      <h6>Who is Poppie?</h6>
+      <h2>Who is Poppie?</h2>
       <p>
         Poppie is a bright and resilient young girl, known for her infectious smile
         and boundless energy. She brings light to everyone around her and has always faced life with courage.
       </p>
 
-      <!-- Conditionally Show More -->
       <div *ngIf="readMore">
         <p>
           Recently, Poppie was diagnosed with a rare and aggressive illness.
@@ -42,15 +38,13 @@
         </p>
       </div>
 
-      <!-- Toggle Button -->
       <button class="btn btn-link p-0" (click)="toggleReadMore()">
         {{ readMore ? 'Read less' : 'Read more' }}
       </button>
     </div>
 
-    <!-- Documents Tab Content -->
     <div *ngIf="selectedTabId === 2">
-      <h5>Supported Document(s)</h5>
+      <h2>Supported Document(s)</h2>
       <img
         src="assets/doc-placeholder.jpg"
         alt="Document"
@@ -58,6 +52,13 @@
         style="max-width: 300px;"
       />
       <p class="text-muted">Here is the proof document submitted for the cause.</p>
+    </div>
+
+    <div *ngIf="selectedTabId === 3">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum
+        doloremque. Quisquam, voluptatum doloremque. Quisquam, voluptatum doloremque.
+        Quisquam, voluptatum doloremque. Quisquam, voluptatum doloremque.
     </div>
   </div>
 </div>

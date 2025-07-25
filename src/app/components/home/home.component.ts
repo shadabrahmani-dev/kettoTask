@@ -14,10 +14,11 @@ export class HomeComponent {
 
   mediaItems = [
     { type: 'image', src: 'assets/img1.webp' },
-    { type: 'video', src: 'assets/video.mp4' },
+    { type: 'video', src: 'assets/video2.mp4' },
     { type: 'image', src: 'assets/img.webp' },
-            
+    
   ];
+
 }
 
 
