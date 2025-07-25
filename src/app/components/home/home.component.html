@@ -1,8 +1,9 @@
-<app-navbar></app-navbar>
-<div class="container mt-2" (window:resize)="onResize($event)">
+
+<div class="container mt-3" (window:resize)="onResize($event)">
+  <app-navbar></app-navbar>
   <!-- Desktop heading -->
-  <h2 class="fw-bold text-dark mb-3 d-none d-sm-block">
-    My niece Poppy has lost her parents and need your help!
+  <h2 class="fw-bold text-dark mb-3 d-none d-sm-block mt-3">
+    <span style="font-size:2.5rem;">My niece Poppy has lost her parents and need your help!</span>
   </h2>
 
   <div class="row">
@@ -16,8 +17,8 @@
     </div>
 
     <!-- Mobile heading -->
-    <div *ngIf="isMobile" class="col-10 mx-3 my-3 text-wrap">
-      <h5 class="fw-semibold text-dark">My niece Poppy has lost parents and need your help!</h5>
+    <div *ngIf="isMobile" class="col-12">
+      <h5 class="fw-semibold text-dark mt-3 Lh-5" style="font-size:1.5rem;">My niece Poppy has lost parents and need your help!</h5>
     </div>
 
     <div class="col-md-6">
@@ -28,16 +29,12 @@
       <app-custom-tab></app-custom-tab>
     </div>
 
-    <div class="col-12 mt-3">
-      <!-- <app-testimonial-card></app-testimonial-card> -->
-    </div>
-
     <div class="col-12 mt-3 mb-5">
       <app-faq></app-faq>
     </div>
   </div>
 
   <div *ngIf="isMobile" class="position-fixed bottom-0 start-0 end-0 w-100 bg-white shadow" style="z-index: 100;">
-    <img src="assets/btnImage.png" alt="Donate Now button" class="img-fluid" style="max-height: 65px; object-fit: contain;">
+    <img src="assets/btnImage.png" alt="Donate Now button" class="img-fluid" style="max-height: 80px; object-fit: contain;width: 100%;">
   </div>
 </div>

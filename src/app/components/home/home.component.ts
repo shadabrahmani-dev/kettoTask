@@ -16,11 +16,7 @@ export class HomeComponent {
     { type: 'image', src: 'assets/img1.webp' },
     { type: 'video', src: 'assets/video.mp4' },
     { type: 'image', src: 'assets/img.webp' },
-    { type: 'image', src: 'assets/image.webp' },
-    { type: 'video', src: 'assets/videoPlayback.mp4' },
-    { type: 'image', src: 'assets/image1.webp' },
-    { type: 'image', src: 'assets/image2.webp' },
-    // { type: 'image', src: 'assets/image3.webp' }
+            
   ];
 }
 
