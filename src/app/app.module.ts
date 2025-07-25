@@ -24,8 +24,7 @@ import { FaqComponent } from './components/faq/faq.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
-  
+    HomeModule
 ],
   providers: [],
   bootstrap: [AppComponent]

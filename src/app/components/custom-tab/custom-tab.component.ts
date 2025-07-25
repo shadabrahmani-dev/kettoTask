@@ -22,5 +22,4 @@ selectTab(id: number) {
 toggleReadMore() {
   this.readMore = !this.readMore;
 }
-
 }
